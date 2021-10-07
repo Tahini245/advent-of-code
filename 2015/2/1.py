@@ -6,7 +6,7 @@ def main(filename: str) -> int:
             total += 2 * (l * w + w * h + h * l)
             dimensions.remove(max(dimensions))
             total += dimensions[0] * dimensions[1]
-        return total
+    return total
 
 
 if __name__ == '__main__':
