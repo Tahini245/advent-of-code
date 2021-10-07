@@ -1,5 +1,5 @@
-def main() -> int:
-    with open('input.txt') as file:
+def main(filename: str) -> int:
+    with open(filename) as file:
         total = 0
         for present in file.read().splitlines():
             dimensions = l, w, h = [int(x) for x in present.split('x')]
@@ -10,4 +10,4 @@ def main() -> int:
 
 
 if __name__ == '__main__':
-    print(f'The elves should order {main()} square feet of wrapping paper')
+    print(f'The elves should order {main("input.txt")} square feet of wrapping paper')

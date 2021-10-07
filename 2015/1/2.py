@@ -1,5 +1,5 @@
-def main() -> int:
-    with open('input.txt') as file:
+def main(filename: str) -> int:
+    with open(filename) as file:
         floor = 0
         for i, instruction in enumerate(file.read()):
             if instruction == '(':
@@ -11,4 +11,4 @@ def main() -> int:
 
 
 if __name__ == '__main__':
-    print(f'Santa first enters the basement at char no. {main()}')
+    print('Santa first enters the basement at char no.', main('input.txt'))
