@@ -6,18 +6,18 @@ def main(input: str) -> int:
         x = coords[moving].real
         y = coords[moving].imag
         match instruction:
-            case '^':
+            case "^":
                 coords[moving] = complex(x, y + 1)
-            case 'v':
+            case "v":
                 coords[moving] = complex(x, y - 1)
-            case '>':
+            case ">":
                 coords[moving] = complex(x + 1, y)
-            case '<':
+            case "<":
                 coords[moving] = complex(x - 1, y)
         houses.add(coords[moving])
     return len(houses)
 
 
-if __name__ == '__main__':
-    with open('2015/3/input.txt') as file:
-        print(main(file.read()), 'houses receive at least one present')
+if __name__ == "__main__":
+    with open("2015/3/input.txt") as file:
+        print(main(file.read()), "houses receive at least one present")

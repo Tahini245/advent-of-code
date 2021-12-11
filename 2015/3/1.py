@@ -5,18 +5,18 @@ def main(input: str) -> int:
         x = coords.real
         y = coords.imag
         match i:
-            case '^':
+            case "^":
                 coords = complex(x, y + 1)
-            case 'v':
+            case "v":
                 coords = complex(x, y - 1)
-            case '>':
+            case ">":
                 coords = complex(x + 1, y)
-            case '<':
+            case "<":
                 coords = complex(x - 1, y)
         houses.add(coords)
     return len(houses)
 
 
-if __name__ == '__main__':
-    with open('2015/3/input.txt') as file:
-        print(main(file.read()), 'houses receive at least one present')
+if __name__ == "__main__":
+    with open("2015/3/input.txt") as file:
+        print(main(file.read()), "houses receive at least one present")
